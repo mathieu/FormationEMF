@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.obeo.training.training;singleton:=true
+Bundle-Version: 1.0.0.201006230939
+Bundle-ClassPath: fr.obeo.training.training_1.0.0.201006230939.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: fr.obeo.training.training,fr.obeo.training.training.impl,fr.obeo.training.training.util
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibility:=reexport
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
