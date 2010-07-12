@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.obeo.formation.emf2.relationnel.presentation.RelationnelModelWizardID"
+            name="%_UI_RelationnelModelWizard_label"
+            class="fr.obeo.formation.emf2.relationnel.presentation.RelationnelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RelationnelModelFile.gif">
+         <description>%_UI_RelationnelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="fr.obeo.formation.emf2.relationnel.presentation.RelationnelEditorID"
+            name="%_UI_RelationnelEditor_label"
+            icon="icons/full/obj16/RelationnelModelFile.gif"
+            extensions="relationnel"
+            class="fr.obeo.formation.emf2.relationnel.presentation.RelationnelEditor"
+            contributorClass="fr.obeo.formation.emf2.relationnel.presentation.RelationnelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
