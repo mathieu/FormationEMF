@@ -1,12 +1,18 @@
 package fr.obeo.training.relational.extension.ui.views;
 
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.jface.viewers.IBaseLabelProvider;
@@ -23,11 +29,13 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
 
+import fr.obeo.training.relational.RelationalFactory;
 import fr.obeo.training.relational.RelationalPackage;
 import fr.obeo.training.relational.extension.core.RelationalModelHelper;
 import fr.obeo.training.relational.extension.core.queries.RelationalModelRequestor;
 import fr.obeo.training.relational.extension.core.queries.RelationalRequestProcessor;
 import fr.obeo.training.relational.extension.core.queries.RequestCallback;
+import fr.obeo.training.relational.util.RelationalAdapterFactory;
 
 
 /**
@@ -99,14 +107,28 @@ public class RelationalQueriesView extends ViewPart {
 		initQuerySynchronizer();
 	}
 
+	private AdapterFactory getAdapterFactory() {
+		return new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+	}
+	
 	private IBaseLabelProvider getLabelProvider() {
-		// TODO: Defines a labelProvider for view's widgets
-		return null;
+		return new AdapterFactoryLabelProvider(getAdapterFactory());
 	}
 
 	private IContentProvider getContentProvider() {
-		// TODO: Defines a contentProvider for view's widgets
-		return null;
+		return new AdapterFactoryContentProvider(getAdapterFactory()){
+
+			@Override
+			public Object[] getElements(Object object) {
+				if (object instanceof Collection) {
+					return ((Collection)object).toArray(); 
+				} else {
+					return super.getElements(object);
+				}
+			}
+			
+		};
+
 	}
 
 	private void initQuerySynchronizer() {
