@@ -89,7 +89,7 @@ public class RelationalRequestProcessor {
 	 */
 	private List<String> allRequestsForType(EObject elem) {
 		List<String> result = new ArrayList<String>(requests.size());
-		EClass type = elem.eClass();
+		// EClass type = elem.eClass();
 		for (Iterator<String> iterator = requests.keySet().iterator(); iterator.hasNext();) {
 			String requestID = iterator.next();
 			if (requests.get(requestID).isInstance(elem))

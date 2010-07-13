@@ -7,10 +7,7 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 
-import fr.obeo.training.relational.DataBase;
-import fr.obeo.training.relational.ForeignKey;
-import fr.obeo.training.relational.Schema;
-import fr.obeo.training.relational.Table;
+import fr.obeo.training.relational.iface.*;
 
 /**
  * @author glefur

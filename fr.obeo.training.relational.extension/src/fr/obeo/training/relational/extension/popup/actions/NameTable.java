@@ -4,7 +4,7 @@ import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.ui.IActionDelegate;
 
-import fr.obeo.training.relational.Table;
+import fr.obeo.training.relational.iface.Table;
 
 public class NameTable extends AbstractModelAction {
 

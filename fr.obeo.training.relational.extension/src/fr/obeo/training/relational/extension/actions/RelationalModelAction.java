@@ -11,13 +11,13 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 
-import fr.obeo.training.relational.DataBase;
 import fr.obeo.training.relational.RelationalPackage;
 import fr.obeo.training.relational.extension.core.DisplayModelSwitch;
 import fr.obeo.training.relational.extension.core.RelationalModelHelper;
 import fr.obeo.training.relational.extension.core.queries.RelationalModelRequestor;
 import fr.obeo.training.relational.extension.core.queries.RelationalRequestProcessor;
 import fr.obeo.training.relational.extension.core.queries.RequestCallback;
+import fr.obeo.training.relational.iface.DataBase;
 
 /**
  * Our sample action implements workbench action delegate.

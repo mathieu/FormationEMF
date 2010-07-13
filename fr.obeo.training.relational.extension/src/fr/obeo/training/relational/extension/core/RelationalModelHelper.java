@@ -3,21 +3,18 @@
  */
 package fr.obeo.training.relational.extension.core;
 
-import java.io.IOException;
-import java.util.Collections;
-
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.swt.widgets.FileDialog;
-import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.handlers.CollapseAllHandler;
 
-import fr.obeo.training.relational.Column;
-import fr.obeo.training.relational.DataBase;
-import fr.obeo.training.relational.ForeignKey;
-import fr.obeo.training.relational.PrimaryKey;
-import fr.obeo.training.relational.Schema;
-import fr.obeo.training.relational.Table;
+import fr.obeo.training.relational.RelationalFactory;
+import fr.obeo.training.relational.iface.Column;
+import fr.obeo.training.relational.iface.DataBase;
+import fr.obeo.training.relational.iface.Field;
+import fr.obeo.training.relational.iface.ForeignKey;
+import fr.obeo.training.relational.iface.PrimaryKey;
+import fr.obeo.training.relational.iface.Schema;
+import fr.obeo.training.relational.iface.Table;
+import fr.obeo.training.relational.iface.Type;
 
 /**
  * @author <a href="mailto:goulwen.lefur@obeo.fr">Goulwen Le Fur</a>
@@ -44,7 +41,60 @@ public class RelationalModelHelper {
 	 * @return the root Element : {@link DataBase}.
 	 */
 	public DataBase createModel() {
-		//TODO: Defines the method body
+		RelationalFactory factory = RelationalFactory.eINSTANCE;
+		
+		Schema schema2 = factory.createSchema();
+		schema2.setName("Schema2");
+		
+		Table table3 = factory.createTable();
+		table3.setName("Table3");
+		schema2.getTables().add(table3);
+		
+		PrimaryKey pk = factory.createPrimaryKey();
+		pk.setName("PK3");
+		table3.getFields().add(pk);
+		
+		
+		
+		Schema schema1 = factory.createSchema();
+		schema1.setName("Schema1");
+		
+		Table table2 = factory.createTable();
+		table2.setName("Table2");
+		schema1.getTables().add(table2);
+		
+		Field field = factory.createPrimaryKey();
+		field.setName("PK2");
+		table2.getFields().add(field);
+		
+		Table table1 = factory.createTable();
+		table1.setName("Table1");
+		schema1.getTables().add(table1);
+		
+		field = factory.createPrimaryKey();
+		field.setName("PK1");
+		table1.getFields().add(field);
+		
+		Column column = factory.createColumn();
+		column.setName("col1");
+		column.setType(Type.VARCHAR);
+		table1.getFields().add(column);
+		
+		column = factory.createColumn();
+		column.setName("col2");
+		column.setType(Type.VARCHAR);
+		table1.getFields().add(column);
+		
+		column = factory.createColumn();
+		column.setName("col3");
+		column.setType(Type.VARCHAR);
+		table1.getFields().add(column);
+		
+		ForeignKey fk = factory.createForeignKey();
+		fk.setName("col4");
+		fk.setReference(table3);
+		table1.getFields().add(column);
+
 		return model;
 	}
 	
