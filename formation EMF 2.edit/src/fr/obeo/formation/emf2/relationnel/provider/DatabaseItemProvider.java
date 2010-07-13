@@ -7,10 +7,10 @@
 package fr.obeo.formation.emf2.relationnel.provider;
 
 
-import fr.obeo.formation.emf2.relationnel.RelationnelFactory;
-import fr.obeo.formation.emf2.relationnel.RelationnelPackage;
 
-import fr.obeo.formation.emf2.relationnel.iface.Database;
+import fr.obeo.training.relational.RelationnelFactory;
+import fr.obeo.training.relational.RelationnelPackage;
+import fr.obeo.training.relational.iface.Database;
 
 import java.util.Collection;
 import java.util.List;
@@ -34,7 +34,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.Database} object.
+ * This is the item provider adapter for a {@link fr.obeo.training.relational.iface.Database} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

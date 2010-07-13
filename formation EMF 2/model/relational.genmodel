@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/formation EMF 2/src"
+    modelPluginID="formationEMF2" modelName="Relational" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>relational.ecore</foreignModel>
+  <genPackages prefix="Relational" basePackage="fr.obeo.taining" disposableProviderFactory="true"
+      interfacePackageSuffix="iface" ecorePackage="relational.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="relational.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/VARCHAR"/>
+      <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/NUMERIC"/>
+      <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/TIME"/>
+      <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/FLOAT"/>
+      <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/BOOLEAN"/>
+      <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/CHAR"/>
+    </genEnums>
+    <genClasses ecoreClass="relational.ecore#//DataBase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relational.ecore#//DataBase/schemas"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relational.ecore#//DataBase/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relational.ecore#//DataBase/port"/>
+    </genClasses>
+    <genClasses ecoreClass="relational.ecore#//Schema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relational.ecore#//Schema/tables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relational.ecore#//Schema/name"/>
+    </genClasses>
+    <genClasses ecoreClass="relational.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relational.ecore#//Table/fields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relational.ecore#//Table/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="relational.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relational.ecore#//Field/name"/>
+    </genClasses>
+    <genClasses ecoreClass="relational.ecore#//PrimaryKey">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relational.ecore#//PrimaryKey/id"/>
+    </genClasses>
+    <genClasses ecoreClass="relational.ecore#//ForeignKey">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relational.ecore#//ForeignKey/reference"/>
+    </genClasses>
+    <genClasses ecoreClass="relational.ecore#//Column">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute relational.ecore#//Column/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

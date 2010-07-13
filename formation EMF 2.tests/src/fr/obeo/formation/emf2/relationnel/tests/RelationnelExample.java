@@ -6,10 +6,10 @@
  */
 package fr.obeo.formation.emf2.relationnel.tests;
 
-import fr.obeo.formation.emf2.relationnel.RelationnelFactory;
-import fr.obeo.formation.emf2.relationnel.RelationnelPackage;
 
-import fr.obeo.formation.emf2.relationnel.iface.Database;
+import fr.obeo.training.relational.RelationnelFactory;
+import fr.obeo.training.relational.RelationnelPackage;
+import fr.obeo.training.relational.iface.Database;
 
 import java.io.File;
 import java.io.IOException;

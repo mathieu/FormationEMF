@@ -7,9 +7,9 @@
 package fr.obeo.formation.emf2.relationnel.provider;
 
 
-import fr.obeo.formation.emf2.relationnel.RelationnelPackage;
 
-import fr.obeo.formation.emf2.relationnel.iface.Column;
+import fr.obeo.training.relational.RelationnelPackage;
+import fr.obeo.training.relational.iface.Column;
 
 import java.util.Collection;
 import java.util.List;
@@ -28,7 +28,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.Column} object.
+ * This is the item provider adapter for a {@link fr.obeo.training.relational.iface.Column} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

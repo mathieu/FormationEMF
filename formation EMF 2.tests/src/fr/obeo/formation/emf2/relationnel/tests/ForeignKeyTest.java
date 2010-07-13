@@ -6,9 +6,9 @@
  */
 package fr.obeo.formation.emf2.relationnel.tests;
 
-import fr.obeo.formation.emf2.relationnel.RelationnelFactory;
 
-import fr.obeo.formation.emf2.relationnel.iface.ForeignKey;
+import fr.obeo.training.relational.RelationnelFactory;
+import fr.obeo.training.relational.iface.ForeignKey;
 
 import junit.textui.TestRunner;
 

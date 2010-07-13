@@ -73,9 +73,9 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import fr.obeo.formation.emf2.relationnel.RelationnelFactory;
-import fr.obeo.formation.emf2.relationnel.RelationnelPackage;
 import fr.obeo.formation.emf2.relationnel.provider.RelationnelEditPlugin;
+import fr.obeo.training.relational.RelationnelFactory;
+import fr.obeo.training.relational.RelationnelPackage;
 
 
 import org.eclipse.core.runtime.Path;

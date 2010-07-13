@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.marache.com/relationnel/1.0"
-            class="fr.obeo.formation.emf2.relationnel.RelationnelPackage"/>
+            class="fr.obeo.training.relational.RelationnelPackage"/>
    </extension>
 
 </plugin>

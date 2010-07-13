@@ -7,10 +7,10 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: fr.obeo.formation.emf2.relationnel,
- fr.obeo.formation.emf2.relationnel.iface,
- fr.obeo.formation.emf2.relationnel.impl,
- fr.obeo.formation.emf2.relationnel.util
+Export-Package: fr.obeo.training.relational,
+ fr.obeo.training.relational.iface,
+ fr.obeo.training.relational.impl,
+ fr.obeo.training.relational.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

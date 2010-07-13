@@ -6,7 +6,7 @@
  */
 package fr.obeo.formation.emf2.relationnel.provider;
 
-import fr.obeo.formation.emf2.relationnel.util.RelationnelAdapterFactory;
+import fr.obeo.training.relational.util.RelationnelAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -76,7 +76,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.formation.emf2.relationnel.iface.Database} instances.
+	 * This keeps track of the one adapter used for all {@link fr.obeo.training.relational.iface.Database} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -84,7 +84,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	protected DatabaseItemProvider databaseItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.Database}.
+	 * This creates an adapter for a {@link fr.obeo.training.relational.iface.Database}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -99,7 +99,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.formation.emf2.relationnel.iface.Schema} instances.
+	 * This keeps track of the one adapter used for all {@link fr.obeo.training.relational.iface.Schema} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -107,7 +107,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	protected SchemaItemProvider schemaItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.Schema}.
+	 * This creates an adapter for a {@link fr.obeo.training.relational.iface.Schema}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -122,7 +122,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.formation.emf2.relationnel.iface.Table} instances.
+	 * This keeps track of the one adapter used for all {@link fr.obeo.training.relational.iface.Table} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -130,7 +130,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	protected TableItemProvider tableItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.Table}.
+	 * This creates an adapter for a {@link fr.obeo.training.relational.iface.Table}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -145,7 +145,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.formation.emf2.relationnel.iface.PrimaryKey} instances.
+	 * This keeps track of the one adapter used for all {@link fr.obeo.training.relational.iface.PrimaryKey} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -153,7 +153,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	protected PrimaryKeyItemProvider primaryKeyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.PrimaryKey}.
+	 * This creates an adapter for a {@link fr.obeo.training.relational.iface.PrimaryKey}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -168,7 +168,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.formation.emf2.relationnel.iface.ForeignKey} instances.
+	 * This keeps track of the one adapter used for all {@link fr.obeo.training.relational.iface.ForeignKey} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -176,7 +176,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	protected ForeignKeyItemProvider foreignKeyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.ForeignKey}.
+	 * This creates an adapter for a {@link fr.obeo.training.relational.iface.ForeignKey}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -191,7 +191,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.formation.emf2.relationnel.iface.Column} instances.
+	 * This keeps track of the one adapter used for all {@link fr.obeo.training.relational.iface.Column} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -199,7 +199,7 @@ public class RelationnelItemProviderAdapterFactory extends RelationnelAdapterFac
 	protected ColumnItemProvider columnItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.obeo.formation.emf2.relationnel.iface.Column}.
+	 * This creates an adapter for a {@link fr.obeo.training.relational.iface.Column}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -6,9 +6,9 @@
  */
 package fr.obeo.formation.emf2.relationnel.tests;
 
-import fr.obeo.formation.emf2.relationnel.RelationnelFactory;
 
-import fr.obeo.formation.emf2.relationnel.iface.Schema;
+import fr.obeo.training.relational.RelationnelFactory;
+import fr.obeo.training.relational.iface.Schema;
 
 import junit.framework.TestCase;
 
