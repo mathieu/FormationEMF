@@ -3,9 +3,17 @@
  */
 package fr.obeo.training.relational.extension.core;
 
+import java.io.IOException;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.swt.widgets.DirectoryDialog;
+import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.Shell;
 
 import fr.obeo.training.relational.RelationalFactory;
+import fr.obeo.training.relational.RelationalPackage;
 import fr.obeo.training.relational.iface.Column;
 import fr.obeo.training.relational.iface.DataBase;
 import fr.obeo.training.relational.iface.Field;
@@ -109,7 +117,17 @@ public class RelationalModelHelper {
 	 * @param path the path where to save path.
 	 */
 	public void saveModel() {
-		//TODO: Defines the method body
+		DirectoryDialog fd = new DirectoryDialog(new Shell());
+		String path = fd.open();
+		URI fileURI = URI.createFileURI(path+"/relational.xmi");
+		Resource resource = resourceSet.createResource(fileURI);
+		resource.getContents().add(model);
+		try {
+			resource.save(null);
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+		}
+		
 	}
 	
 }

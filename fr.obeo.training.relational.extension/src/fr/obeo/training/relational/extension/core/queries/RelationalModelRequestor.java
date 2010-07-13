@@ -3,10 +3,17 @@
  */
 package fr.obeo.training.relational.extension.core.queries;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.query.statements.FROM;
 
+import fr.obeo.training.relational.RelationalFactory;
+import fr.obeo.training.relational.RelationalPackage;
 import fr.obeo.training.relational.iface.*;
 
 /**
@@ -49,8 +56,14 @@ public class RelationalModelRequestor {
 	 * @return a list of {@link Table} with more than 4 fields
 	 */
 	public List<Table> tablesWithMoreThanFourFields(Schema schema) {
-		// TODO: use eContents() service to implement this request
-		return null;
+		List<Table> list = new ArrayList<Table>();
+		
+		for (Table table : schema.getTables()) {
+			if (table.eContents().size() > 4)
+				list.add(table);
+		}
+		
+		return list;
 	}
 
 	
@@ -59,8 +72,16 @@ public class RelationalModelRequestor {
 	 * @return a list with all the {@link Table} of the database
 	 */
 	public List<Table> allTablesInDatabases(DataBase database) {
-		// TODO: use eAllContents() service to implement this request
-		return null;
+		List<Table> list = new ArrayList<Table>();
+		
+		TreeIterator<EObject> ti = database.eAllContents();
+		while (ti.hasNext()) {
+			EObject eObject = (EObject) ti.next();
+			if (eObject.eClass().equals(RelationalPackage.eINSTANCE.getTable()))
+				list.add((Table)eObject);
+		}
+		
+		return list;
 	}
 	
 	
@@ -70,15 +91,32 @@ public class RelationalModelRequestor {
 	 */
 	public List<ForeignKey> allForeignKeysWithTargetInOtherSchemas(Schema schema) {
 		// TODO: use eContainer() service to implement this request
-		return null;
+		List<ForeignKey> list = new ArrayList<ForeignKey>();
+		
+		TreeIterator<EObject> ti = schema.eAllContents();
+		while (ti.hasNext()) {
+			EObject eObject = (EObject) ti.next();
+			if (eObject.eClass().equals(RelationalPackage.eINSTANCE.getForeignKey()))
+			{
+				ForeignKey fk = (ForeignKey)eObject;
+			
+				if (!fk.getReference().eContainer().equals(schema))
+					list.add(fk);
+			}
+		}
+		
+		return list;	
 	}
 	
 	/**
-	 * @param element the element to analyse
-	 * @return <code>true</code> when the given object has a name attribut and if the value of this attribute starts with an UpperCase.
+	 * @param element the element to analyze
+	 * @return <code>true</code> when the given object has a name attribute and if the value of this attribute starts with an UpperCase.
 	 */
 	public Boolean hasNameBegginingWithUppercase(EObject element) {
 		// TODO: use eGet() service to implement this request
+		EStructuralFeature sf = element.eClass().getEStructuralFeature("name");
+		if (sf != null)
+			return Character.isUpperCase(element.eGet(sf).toString().charAt(0));
 		return Boolean.FALSE;
 	}
 }
