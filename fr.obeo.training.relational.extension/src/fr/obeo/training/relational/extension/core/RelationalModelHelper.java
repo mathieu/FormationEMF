@@ -43,8 +43,13 @@ public class RelationalModelHelper {
 	public DataBase createModel() {
 		RelationalFactory factory = RelationalFactory.eINSTANCE;
 		
+		model = factory.createDataBase();
+		model.setUri("http://www.obeo.fr/training/relational");
+		model.setPort(3000);
+		
 		Schema schema2 = factory.createSchema();
 		schema2.setName("Schema2");
+		model.getSchemas().add(schema2);
 		
 		Table table3 = factory.createTable();
 		table3.setName("Table3");
@@ -58,7 +63,8 @@ public class RelationalModelHelper {
 		
 		Schema schema1 = factory.createSchema();
 		schema1.setName("Schema1");
-		
+		model.getSchemas().add(schema1);
+
 		Table table2 = factory.createTable();
 		table2.setName("Table2");
 		schema1.getTables().add(table2);
@@ -93,7 +99,7 @@ public class RelationalModelHelper {
 		ForeignKey fk = factory.createForeignKey();
 		fk.setName("col4");
 		fk.setReference(table3);
-		table1.getFields().add(column);
+		table1.getFields().add(fk);
 
 		return model;
 	}
