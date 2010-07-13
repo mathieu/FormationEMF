@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://www.marache.com/relationnel/1.0"
-            class="fr.obeo.formation.emf2.relationnel.provider.RelationnelItemProviderAdapterFactory"
+            uri="http://www.obeo.fr/training/relational/1.0"
+            class="fr.obeo.training.relational.provider.RelationalItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

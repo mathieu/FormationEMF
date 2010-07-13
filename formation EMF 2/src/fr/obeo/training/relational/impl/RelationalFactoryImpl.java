@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import fr.obeo.training.relational.RelationalFactory;
 import fr.obeo.training.relational.RelationalPackage;
+import fr.obeo.training.relational.iface.*;
 import fr.obeo.training.relational.iface.Column;
 import fr.obeo.training.relational.iface.DataBase;
 import fr.obeo.training.relational.iface.ForeignKey;

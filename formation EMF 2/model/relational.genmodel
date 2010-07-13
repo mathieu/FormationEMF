@@ -5,7 +5,7 @@
     modelPluginID="formationEMF2" modelName="Relational" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="6.0" copyrightFields="false">
   <foreignModel>relational.ecore</foreignModel>
-  <genPackages prefix="Relational" basePackage="fr.obeo.taining" disposableProviderFactory="true"
+  <genPackages prefix="Relational" basePackage="fr.obeo.training" disposableProviderFactory="true"
       interfacePackageSuffix="iface" ecorePackage="relational.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="relational.ecore#//Type">
       <genEnumLiterals ecoreEnumLiteral="relational.ecore#//Type/VARCHAR"/>

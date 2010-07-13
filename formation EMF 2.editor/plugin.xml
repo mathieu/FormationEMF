@@ -15,24 +15,24 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="fr.obeo.formation.emf2.relationnel.presentation.RelationnelModelWizardID"
-            name="%_UI_RelationnelModelWizard_label"
-            class="fr.obeo.formation.emf2.relationnel.presentation.RelationnelModelWizard"
+            id="fr.obeo.training.relational.presentation.RelationalModelWizardID"
+            name="%_UI_RelationalModelWizard_label"
+            class="fr.obeo.training.relational.presentation.RelationalModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/RelationnelModelFile.gif">
-         <description>%_UI_RelationnelModelWizard_description</description>
+            icon="icons/full/obj16/RelationalModelFile.gif">
+         <description>%_UI_RelationalModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="fr.obeo.formation.emf2.relationnel.presentation.RelationnelEditorID"
-            name="%_UI_RelationnelEditor_label"
-            icon="icons/full/obj16/RelationnelModelFile.gif"
-            extensions="relationnel"
-            class="fr.obeo.formation.emf2.relationnel.presentation.RelationnelEditor"
-            contributorClass="fr.obeo.formation.emf2.relationnel.presentation.RelationnelActionBarContributor">
+            id="fr.obeo.training.relational.presentation.RelationalEditorID"
+            name="%_UI_RelationalEditor_label"
+            icon="icons/full/obj16/RelationalModelFile.gif"
+            extensions="relational"
+            class="fr.obeo.training.relational.presentation.RelationalEditor"
+            contributorClass="fr.obeo.training.relational.presentation.RelationalActionBarContributor">
       </editor>
    </extension>
 

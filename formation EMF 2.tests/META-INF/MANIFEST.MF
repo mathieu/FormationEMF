@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: fr.obeo.formation.emf2.relationnel.tests
+Export-Package: fr.obeo.training.relational.tests
 Require-Bundle: org.eclipse.core.runtime,
  formationEMF2;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
