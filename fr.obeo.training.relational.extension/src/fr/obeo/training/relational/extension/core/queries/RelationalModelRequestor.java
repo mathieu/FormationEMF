@@ -112,11 +112,11 @@ public class RelationalModelRequestor {
 	 * @param element the element to analyze
 	 * @return <code>true</code> when the given object has a name attribute and if the value of this attribute starts with an UpperCase.
 	 */
-	public Boolean hasNameBegginingWithUppercase(EObject element) {
+	public EObject hasNameBegginingWithUppercase(EObject element) {
 		// TODO: use eGet() service to implement this request
 		EStructuralFeature sf = element.eClass().getEStructuralFeature("name");
 		if (sf != null)
-			return Character.isUpperCase(element.eGet(sf).toString().charAt(0));
-		return Boolean.FALSE;
+			return Character.isUpperCase(element.eGet(sf).toString().charAt(0))? element : null;
+		return null;
 	}
 }

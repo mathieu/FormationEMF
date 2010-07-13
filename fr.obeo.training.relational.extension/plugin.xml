@@ -45,7 +45,7 @@
          point="org.eclipse.ui.popupMenus">
       <objectContribution
             id="fr.obeo.training.relational.extension.contribution1"
-            objectClass="fr.obeo.training.relational.Table">
+            objectClass="fr.obeo.training.relational.iface.Table">
          <menu
                id="fr.obeo.training.relational.extension.menu1"
                label="Relational Editing"
