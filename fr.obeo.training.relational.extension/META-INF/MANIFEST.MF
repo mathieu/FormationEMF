@@ -15,7 +15,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.compare.diff,
  org.eclipse.emf.compare.match,
  org.eclipse.emf.compare,
- org.eclipse.emf.teneo.hibernate;visibility:=reexport,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.emf.edit.ui,
  formationEMF2;bundle-version="1.0.0"

@@ -4,7 +4,6 @@
 package fr.obeo.training.relational.extension.core;
 
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.ui.handlers.CollapseAllHandler;
 
 import fr.obeo.training.relational.RelationalFactory;
 import fr.obeo.training.relational.iface.Column;

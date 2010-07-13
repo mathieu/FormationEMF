@@ -3,14 +3,6 @@
 <plugin>
 
    <extension
-         point="org.eclipse.emf.compare.diff.engine">
-      <diffengine
-            engineClass="fr.obeo.training.relational.extension.compare.RelationalDiffEngine"
-            fileExtension="relational"
-            priority="high">
-      </diffengine>
-   </extension>
-   <extension
          point="org.eclipse.ui.actionSets">
       <actionSet
             id="fr.obeo.training.extension.actionSet"
